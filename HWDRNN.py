@@ -44,8 +44,26 @@ x, y = load_digits(return_X_y = True)
 #                             64 (equal to number of features) #
 # Activation function for the hidden layer: sigmoid            #
 # Learning Rate:                     0.05                      #
-x_train, x_test, y_train, y_test = train_test_split(x, y, train_size = 0.5, test_size = 0.5, random_state = 2)
+# x_train, x_test, y_train, y_test = train_test_split(x, y, train_size = 0.5, test_size = 0.5, random_state = 2)
 
+# mlp = MLPClassifier(hidden_layer_sizes = (64,), activation = 'logistic', learning_rate_init = 0.05)
+
+# # Training model #
+# mlp.fit(x_train, y_train)
+
+# # Mean accuracy  #
+# print(mlp.score(x_test, y_test))
+
+
+
+######################## Third Try #############################
+# Using 20% of dataset to train and 80% to test.               #
+# Number of hidden layers:           1                         #
+# Number of neurons in hidden layer:                           #
+#                             64 (equal to number of features) #
+# Activation function for the hidden layer: sigmoid            #
+# Learning Rate:                     0.05                      #
+x_train, x_test, y_train, y_test = train_test_split(x, y, train_size = 0.2, test_size = 0.8, random_state = 2)
 
 mlp = MLPClassifier(hidden_layer_sizes = (64,), activation = 'logistic', learning_rate_init = 0.05)
 
